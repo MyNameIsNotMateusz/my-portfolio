@@ -17,6 +17,17 @@ export const Content = styled.div`
   @media (max-width: 1200px) {
     padding: 100px 60px;
   }
+
+  @media (max-width: 768px) {
+    padding: 80px 40px;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 30px;
+    row-gap: 30px;
+  }
 `;
 
 export const FeatureItemWrapper = styled.div`
@@ -42,6 +53,13 @@ export const IconWrapper = styled.div`
     width: 20px;
     height: 20px;
     color: ${({ theme }) => theme.text1};
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 `;
 

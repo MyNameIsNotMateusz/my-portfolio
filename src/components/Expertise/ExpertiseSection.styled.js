@@ -12,6 +12,15 @@ export const Content = styled.div`
   max-width: 2000px;
   padding: 0 60px;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 40px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 30px;
+  }
 `;
 
 export const CardsGrid = styled.div`
@@ -23,6 +32,15 @@ export const CardsGrid = styled.div`
 
   & > :nth-child(1) {
     grid-column: span 2;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    & > :nth-child(1) {
+      grid-column: span 1;
+    }
   }
 `;
 
@@ -36,6 +54,14 @@ export const ExpertiseCard = styled.div`
   justify-content: space-between;
   row-gap: 35px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 22px;
+  }
 `;
 
 export const ExpertiseTextContainer = styled.div`
@@ -53,6 +79,10 @@ export const ExpertiseTitle = styled.h3`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.mediumLarge};
   }
+
+  @media (max-width: 768px) {
+    font-size: ${fontSizes.regular};
+  }
 `;
 
 export const ExpertiseSubtitle = styled.p`
@@ -67,7 +97,7 @@ export const ExpertiseSubtitle = styled.p`
     color: ${({ theme }) => theme.primary};
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 768px) {
     font-size: ${fontSizes.small};
   }
 `;
@@ -87,6 +117,18 @@ export const ExpertiseIconWrapper = styled.div`
 
     @media (max-width: 1200px) {
       height: 170px;
+    }
+
+    @media (max-width: 992px) {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      height: 130px;
+    }
+
+    @media (max-width: 480px) {
+      height: 80px;
     }
   }
 `;

@@ -13,16 +13,29 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
+
+  @media (max-width: 768px) {
+    padding: 15px 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 30px;
+  }
 `;
 
 export const LogoStyled = styled.h1`
   font-size: ${fontSizes.large};
   font-weight: 700;
+  white-space: nowrap;
   cursor: pointer;
   color: ${({ theme }) => theme.text1};
 
   @media (max-width: 1200px) {
     font-size: ${fontSizes.mediumLarge};
+  }
+
+  @media (max-width: 768px) {
+    font-size: ${fontSizes.medium};
   }
 `;
 
@@ -39,6 +52,10 @@ export const ScrollButtonStyled = styled.button`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.small};
   }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const DownloadButtonStyled = styled.a`
@@ -47,7 +64,6 @@ export const DownloadButtonStyled = styled.a`
   padding: 15px 25px;
   font-size: ${fontSizes.medium};
   color: ${({ theme }) => theme.text1};
-  border-color: ${({ theme }) => theme.borderColor1};
   border-radius: 100px;
   text-decoration: none;
   white-space: nowrap;
@@ -64,5 +80,16 @@ export const DownloadButtonStyled = styled.a`
 
   @media (max-width: 1200px) {
     font-size: ${fontSizes.small};
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+    font-size: ${fontSizes.small};
+    padding: 13px 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 0;
+    padding: 9px 13px;
   }
 `;

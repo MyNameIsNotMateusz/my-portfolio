@@ -16,6 +16,17 @@ export const Content = styled.div`
   @media (max-width: 1200px) {
     padding: 100px 60px;
   }
+
+  @media (max-width: 768px) {
+    padding: 80px 40px;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 30px;
+    row-gap: 30px;
+  }
 `;
 
 export const HeroLeft = styled.div`
@@ -26,6 +37,10 @@ export const HeroLeft = styled.div`
 
   @media (max-width: 1200px) {
     row-gap: 25px;
+  }
+
+  @media (max-width: 768px) {
+    row-gap: 20px;
   }
 `;
 
@@ -39,6 +54,15 @@ export const HeroTitleStyled = styled.h1`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.xlplus};
   }
+
+  @media (max-width: 768px) {
+    font-size: ${fontSizes.xlarge};
+    line-height: 1.3;
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${fontSizes.xlargeMid};
+  }
 `;
 
 export const HeroSubtitleStyled = styled.h2`
@@ -51,6 +75,11 @@ export const HeroSubtitleStyled = styled.h2`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.medium};
   }
+
+  @media (max-width: 768px) {
+    font-size: ${fontSizes.small};
+    line-height: 1.7;
+  }
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -60,21 +89,31 @@ export const ButtonsWrapper = styled.div`
   @media (max-width: 1200px) {
     column-gap: 15px;
   }
+
+  @media (max-width: 768px) {
+    column-gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    row-gap: 8px;
+    flex-direction: column;
+  }
 `;
 
 export const ResumeButtonStyled = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px 25px;
   font-size: ${fontSizes.medium};
   border-radius: 100px;
   font-weight: 500;
-  border: 2px solid ${({ theme }) => theme.borderColor2};
   background-color: ${({ theme }) => theme.primary};
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
 
   &:hover {
     border-color: ${({ theme }) => theme.borderColor1};
@@ -85,11 +124,21 @@ export const ResumeButtonStyled = styled.a`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.small};
   }
+
+  @media (max-width: 768px) {
+    padding: 13px 20px;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 9px 13px;
+  }
 `;
 
 export const DemoButtonStyled = styled.a`
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 10px;
   padding: 15px 25px;
   font-size: ${fontSizes.medium};
@@ -128,6 +177,15 @@ export const DemoButtonStyled = styled.a`
   @media (max-width: 1200px) {
     font-size: ${fontSizes.small};
   }
+
+  @media (max-width: 768px) {
+    padding: 13px 20px;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 9px 13px;
+  }
 `;
 
 export const HeroRight = styled.div`
@@ -135,6 +193,11 @@ export const HeroRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    align-items: start;
+    min-height: 35px;
+  }
 `;
 
 const fromLeft = keyframes`
@@ -156,18 +219,24 @@ const fromRight = keyframes`
 `;
 
 export const LoaderWrapper = styled.div`
-  scale: 3;
-  width: 40px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(3);
+
+  @media (max-width: 768px) {
+    transform: scale(2);
+    margin-right: 10%;
+  }
+
+  @media (max-width: 480px) {
+    transform: scale(1.5);
+  }
 `;
 
 export const Box = styled.div`
   position: relative;
   opacity: 0;
-  left: 10px;
 
   &.box-1 {
     animation: ${fromLeft} 4s infinite;
