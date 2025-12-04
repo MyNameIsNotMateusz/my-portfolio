@@ -11,7 +11,7 @@ import { ResumeButton } from "./ResumeButton";
 import { DemoButton } from "./DemoButton";
 import { HeroLoader } from "./HeroLoader";
 
-export const Hero = () => {
+export const Hero = ({ onScroll }) => {
   return (
     <SectionWrapper>
       <Content>
@@ -20,7 +20,7 @@ export const Hero = () => {
           <HeroSubtitle />
           <ButtonsWrapper>
             <ResumeButton />
-            <DemoButton />
+            <DemoButton onScroll={onScroll} />
           </ButtonsWrapper>
         </HeroLeft>
         <HeroRight>

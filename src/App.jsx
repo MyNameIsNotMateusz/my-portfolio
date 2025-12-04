@@ -6,13 +6,19 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Hero } from "./components/Hero/Hero";
 import { FeaturesSection } from "./components/Features/FeaturesSection";
 import { ExpertiseSection } from "./components/Expertise/ExpertiseSection";
+import { ShowcaseSection } from "./components/Showcase/ShowcaseSection";
 import { useRef } from "react";
 
 export const App = () => {
   const secondSectionRef = useRef(null);
+  const thirdSectionRef = useRef(null);
 
-  const scrollToSection = () => {
+  const scrollToSecondSection = () => {
     secondSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToThirdSection = () => {
+    thirdSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -20,10 +26,11 @@ export const App = () => {
       <GlobalStyles />
 
       <PageWrapper>
-        <Navbar onScroll={scrollToSection} />
-        <Hero />
+        <Navbar onScroll={scrollToSecondSection} />
+        <Hero onScroll={scrollToThirdSection} />
         <FeaturesSection />
         <ExpertiseSection sectionRef={secondSectionRef} />
+        <ShowcaseSection sectionRef={thirdSectionRef} />
       </PageWrapper>
     </ThemeProvider>
   );
