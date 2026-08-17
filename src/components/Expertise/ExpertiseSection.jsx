@@ -8,8 +8,8 @@ import {
   ExpertiseIconWrapper,
   ExpertiseTextContainer,
 } from "./ExpertiseSection.styled";
-import wmsIcon from "../../assets/images/wms.png";
-import platformIcon from "../../assets/images/platform.png";
+// import wmsIcon from "../../assets/images/wms.png";
+// import platformIcon from "../../assets/images/platform.png";
 
 export const ExpertiseSection = ({ sectionRef }) => {
   return (
@@ -39,7 +39,7 @@ export const ExpertiseSection = ({ sectionRef }) => {
               </ExpertiseSubtitle>
             </ExpertiseTextContainer>
             <ExpertiseIconWrapper>
-              <img src={wmsIcon} alt="WMS Mockup" />
+              {/* <img src={wmsIcon} alt="WMS Mockup" /> */}
             </ExpertiseIconWrapper>
           </ExpertiseCard>
 
@@ -56,7 +56,7 @@ export const ExpertiseSection = ({ sectionRef }) => {
             </ExpertiseTextContainer>
 
             <ExpertiseIconWrapper>
-              <img src={platformIcon} alt="Platform Mockup" />
+              {/* <img src={platformIcon} alt="Platform Mockup" /> */}
             </ExpertiseIconWrapper>
           </ExpertiseCard>
         </CardsGrid>

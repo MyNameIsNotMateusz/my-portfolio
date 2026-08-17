@@ -1,34 +1,7 @@
 import styled from "styled-components";
 import { fontSizes } from "../../styles/variables";
 
-export const SectionWrapper = styled.nav`
-  width: 100%;
-  background-color: ${({ theme }) => theme.background2};
-`;
-
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 20px;
-  margin: 0 auto;
-  max-width: 2000px;
-  padding: 120px 60px 20px 60px;
-
-  @media (max-width: 1200px) {
-    row-gap: 15px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 80px 40px 15px 40px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 60px 30px 15px 30px;
-  }
-`;
-
-export const SliderWrapper = styled.div`
+export const CarouselViewport = styled.div`
   position: relative;
   height: auto;
   width: 55%;
@@ -40,7 +13,7 @@ export const SliderWrapper = styled.div`
   }
 `;
 
-export const SlideBox = styled.div`
+export const SlidesContainer = styled.div`
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s;
@@ -52,23 +25,7 @@ export const SlideBox = styled.div`
   }
 `;
 
-export const TextWrapper = styled.div`
-  display: flex;
-`;
-
-export const Text = styled.p`
-  font-weight: 500;
-  font-size: ${fontSizes.medium};
-  color: ${({ theme }) => theme.text2};
-  line-height: 1.6;
-  text-align: center;
-
-  @media (max-width: 1200px) {
-    font-size: ${fontSizes.small};
-  }
-`;
-
-export const ButtonsWrapper = styled.div`
+export const CarouselControls = styled.div`
   display: flex;
   column-gap: 20px;
 
@@ -77,7 +34,7 @@ export const ButtonsWrapper = styled.div`
   }
 `;
 
-export const SliderButtonRight = styled.button`
+export const NextButton = styled.button`
   position: relative;
   background-color: #f6f6f6;
   width: 40px;
@@ -105,7 +62,7 @@ export const SliderButtonRight = styled.button`
   }
 `;
 
-export const SliderButtonLeft = styled.button`
+export const PreviousButton = styled.button`
   position: relative;
   background-color: #f6f6f6;
   width: 40px;

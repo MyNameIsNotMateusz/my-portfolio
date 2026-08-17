@@ -6,8 +6,9 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Hero } from "./components/Hero/Hero";
 import { FeaturesSection } from "./components/Features/FeaturesSection";
 import { ExpertiseSection } from "./components/Expertise/ExpertiseSection";
-import { ShowcaseSection } from "./components/Showcase/ShowcaseSection";
 import { useRef } from "react";
+import { projects } from "./data/projects";
+import { ProjectSection } from "./components/Project/ProjectSection";
 
 export const App = () => {
   const secondSectionRef = useRef(null);
@@ -29,8 +30,13 @@ export const App = () => {
         <Navbar onScroll={scrollToSecondSection} />
         <Hero onScroll={scrollToThirdSection} />
         <FeaturesSection />
+        {projects.map((project) => (
+          <ProjectSection
+            key={project.title}
+            project={project}
+          />
+        ))}
         <ExpertiseSection sectionRef={secondSectionRef} />
-        <ShowcaseSection sectionRef={thirdSectionRef} />
       </PageWrapper>
     </ThemeProvider>
   );
