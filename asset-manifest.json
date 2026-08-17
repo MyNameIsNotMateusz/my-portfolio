@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.f95940ff.js",
-    "static/media/wms.png": "/my-portfolio/static/media/wms.8a63aacc7381ede4d2c1.png",
-    "static/media/platform.png": "/my-portfolio/static/media/platform.a47fa66dcee1bd79cb8c.png",
-    "static/media/dashboard.png": "/my-portfolio/static/media/dashboard.ff0ab79c1981cc03c9c5.png",
-    "static/media/recipes.png": "/my-portfolio/static/media/recipes.de650af51cd5a3bcc2db.png",
-    "static/media/inbound.png": "/my-portfolio/static/media/inbound.27d101a29e700e6831c1.png",
-    "static/media/repackPallet.png": "/my-portfolio/static/media/repackPallet.af119df48980a07bc711.png",
-    "static/media/plannedDelivery.png": "/my-portfolio/static/media/plannedDelivery.db5445b67b1c0b6af473.png",
-    "static/media/outbound.png": "/my-portfolio/static/media/outbound.1a27f8e4b756fe24b435.png",
-    "static/media/palletCreator.png": "/my-portfolio/static/media/palletCreator.d7eb7b632f473591be3e.png",
+    "main.js": "/my-portfolio/static/js/main.d57cf95e.js",
+    "static/media/mapChart.jpg": "/my-portfolio/static/media/mapChart.2c9eb37f5798a725f89a.jpg",
+    "static/media/stockModification.jpg": "/my-portfolio/static/media/stockModification.d70f39a93e067a276b10.jpg",
+    "static/media/demoWmsDashboard.jpg": "/my-portfolio/static/media/demoWmsDashboard.456fd3a6c23a018cdc0d.jpg",
+    "static/media/system.jpg": "/my-portfolio/static/media/system.af2c8349f52a9c4e5510.jpg",
+    "static/media/plannedDeliveries.jpg": "/my-portfolio/static/media/plannedDeliveries.40f3d8bef0692b336695.jpg",
+    "static/media/createComponents.jpg": "/my-portfolio/static/media/createComponents.1b9d37ac7eb2b00814f9.jpg",
+    "static/media/kScopeDashboard.jpg": "/my-portfolio/static/media/kScopeDashboard.fc1838e00030b8018dd8.jpg",
+    "static/media/recipes.jpg": "/my-portfolio/static/media/recipes.6a0907c3158e440a40f6.jpg",
+    "static/media/company.jpg": "/my-portfolio/static/media/company.b16e630ff2fdcd4b27a9.jpg",
+    "static/media/profile.jpg": "/my-portfolio/static/media/profile.84429d9b9eeaa89c62ea.jpg",
+    "static/media/kErpDashboard.jpg": "/my-portfolio/static/media/kErpDashboard.b4072307075d7127c3e0.jpg",
+    "static/media/contactForm.jpg": "/my-portfolio/static/media/contactForm.7fcb88bc3f3008e05679.jpg",
+    "static/media/kErpLogin.jpg": "/my-portfolio/static/media/kErpLogin.05e06f590db46f62b245.jpg",
+    "static/media/searchPage.jpg": "/my-portfolio/static/media/searchPage.82151b51e266eacffde3.jpg",
+    "static/media/demoWmsLogin.jpg": "/my-portfolio/static/media/demoWmsLogin.f41ef392ce9bf36c75e6.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.f95940ff.js.map": "/my-portfolio/static/js/main.f95940ff.js.map"
+    "main.d57cf95e.js.map": "/my-portfolio/static/js/main.d57cf95e.js.map"
   },
   "entrypoints": [
-    "static/js/main.f95940ff.js"
+    "static/js/main.d57cf95e.js"
   ]
 }
