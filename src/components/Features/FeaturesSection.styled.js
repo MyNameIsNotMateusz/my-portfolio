@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { fontSizes } from "../../styles/variables";
 
-export const SectionWrapper = styled.nav`
+export const SectionWrapper = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.background2};
 `;
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
   column-gap: 100px;
   margin: 0 auto;
   max-width: 2000px;
@@ -43,7 +42,7 @@ export const FeatureItemWrapper = styled.div`
 export const IconWrapper = styled.div`
   padding: 10px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.cardBackground};
+  background-color: ${({ theme }) => theme.background1};
   display: flex;
   justify-content: center;
   align-items: center;

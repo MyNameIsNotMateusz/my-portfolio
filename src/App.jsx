@@ -5,38 +5,47 @@ import { PageWrapper } from "./components/PageWrapper/PageWrapper";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Hero } from "./components/Hero/Hero";
 import { FeaturesSection } from "./components/Features/FeaturesSection";
-import { ExpertiseSection } from "./components/Expertise/ExpertiseSection";
-import { useRef } from "react";
+//usestate do usuniecia bedzie 
+import { useRef, useState } from "react";
 import { projects } from "./data/projects";
 import { ProjectSection } from "./components/Project/ProjectSection";
+import { HowIWorkSection } from "./components/HowIWork/HowIWorkSection";
 
 export const App = () => {
-  const secondSectionRef = useRef(null);
-  const thirdSectionRef = useRef(null);
+  //do usuniecia bedzie
+  const [isDark, setIsDark] = useState(false);
 
-  const scrollToSecondSection = () => {
-    secondSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  const projectsSectionRef = useRef(null);
+  const howIWorkSectionRef = useRef(null);
+
+  const scrollToProjects = () => {
+    projectsSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToThirdSection = () => {
-    thirdSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToHowIWork = () => {
+    howIWorkSectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyles />
 
       <PageWrapper>
-        <Navbar onScroll={scrollToSecondSection} />
-        <Hero onScroll={scrollToThirdSection} />
+        <Navbar
+          onScroll={scrollToHowIWork}
+          setIsDark={setIsDark}
+        />
+        <Hero onScroll={scrollToProjects} />
         <FeaturesSection />
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <ProjectSection
             key={project.title}
             project={project}
+            sectionRef={index === 0 ? projectsSectionRef : null}
           />
         ))}
-        <ExpertiseSection sectionRef={secondSectionRef} />
+
+        <HowIWorkSection sectionRef={howIWorkSectionRef} />
       </PageWrapper>
     </ThemeProvider>
   );

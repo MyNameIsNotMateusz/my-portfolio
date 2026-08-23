@@ -8,11 +8,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
-  }
 
-  body {
-    background-color: ${({ theme }) => theme.body};
-    color: ${({theme}) => theme.text};
-    transition: background-color 0.3s ease;
+    transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease,
+    box-shadow 0.3s ease;
   }
 `;

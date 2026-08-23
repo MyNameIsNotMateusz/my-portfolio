@@ -17,8 +17,8 @@ export const FeaturesSection = () => {
         />
         <FeatureItem
           icon={<CubeIcon className="h-8 w-8" />}
-          title="Real warehouse systems"
-          subtitle="My work connects every part of product lifecycle, from assembly to customer delivery."
+          title="Real business systems"
+          subtitle="I build practical systems that support real business operations, from warehouse management to business platforms."
         />
         <FeatureItem
           icon={<UsersIcon className="h-8 w-8" />}

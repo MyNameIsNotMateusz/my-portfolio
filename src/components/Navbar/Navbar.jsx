@@ -1,19 +1,19 @@
-import { SectionWrapper, Content } from "./Navbar.styled";
+import { SectionWrapper, Content, NavbarActions } from "./Navbar.styled";
 import { Logo } from "./Logo";
 import { ScrollButton } from "./ScrollButton";
 import { DownloadButton } from "./DownloadButton";
 
-export const Navbar = ({ onScroll }) => {
+export const Navbar = ({ onScroll, setIsDark }) => {
   return (
     <SectionWrapper>
       <Content>
         <Logo />
 
-        <div>
+        <NavbarActions>
           <ScrollButton onClick={onScroll} />
           <DownloadButton />
-        </div>
+        </NavbarActions>
       </Content>
-    </SectionWrapper>
+    </SectionWrapper >
   );
 };

@@ -27,7 +27,6 @@ export const LogoStyled = styled.h1`
   font-size: ${fontSizes.large};
   font-weight: 700;
   white-space: nowrap;
-  cursor: pointer;
   color: ${({ theme }) => theme.text1};
 
   @media (max-width: 1200px) {
@@ -36,6 +35,19 @@ export const LogoStyled = styled.h1`
 
   @media (max-width: 768px) {
     font-size: ${fontSizes.medium};
+  }
+`;
+
+export const NavbarActions = styled.div`
+  display: flex;
+  column-gap: 30px;
+
+  @media (max-width: 768px) {
+    column-gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    column-gap: 0;
   }
 `;
 
@@ -60,7 +72,6 @@ export const ScrollButtonStyled = styled.button`
 
 export const DownloadButtonStyled = styled.a`
   display: inline-block;
-  margin-left: 30px;
   padding: 15px 25px;
   font-size: ${fontSizes.medium};
   color: ${({ theme }) => theme.text1};
@@ -69,13 +80,12 @@ export const DownloadButtonStyled = styled.a`
   white-space: nowrap;
   cursor: pointer;
   font-weight: 700;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.background2};
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: ${({ theme }) => theme.borderColor2};
     background-color: ${({ theme }) => theme.primary};
-    color: #fff;
+    color: ${({ theme }) => theme.text3};
   }
 
   @media (max-width: 1200px) {
@@ -83,13 +93,11 @@ export const DownloadButtonStyled = styled.a`
   }
 
   @media (max-width: 768px) {
-    margin-left: 15px;
     font-size: ${fontSizes.small};
     padding: 13px 20px;
   }
 
   @media (max-width: 480px) {
-    margin-left: 0;
     padding: 9px 13px;
   }
 `;

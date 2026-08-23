@@ -3,9 +3,8 @@ import {
   CarouselViewport,
   SlidesContainer,
   CarouselControls,
-  PreviousButton,
-  NextButton,
-} from "./ProjectCarousel.styled";
+  CarouselButton,
+} from "./ProjectSection.styled";
 
 export const ProjectCarousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,7 +17,7 @@ export const ProjectCarousel = ({ slides }) => {
   useEffect(() => {
     const updateWidth = () => {
       if (sliderRef.current) {
-        setSlideWidth(sliderRef.current.clientWidth);
+        setSlideWidth(sliderRef.current.getBoundingClientRect().width);
       }
     };
 
@@ -81,35 +80,19 @@ export const ProjectCarousel = ({ slides }) => {
       </SlidesContainer>
 
       <CarouselControls>
-        <PreviousButton onClick={handlePreviousSlide}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="size-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
-              clipRule="evenodd"
-            />
+        <CarouselButton onClick={handlePreviousSlide}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
           </svg>
-        </PreviousButton>
 
-        <NextButton onClick={handleNextSlide}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="size-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 1 1 1.06 1.06l7.5 7.5Z"
-              clipRule="evenodd"
-            />
+        </CarouselButton>
+
+        <CarouselButton onClick={handleNextSlide}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
           </svg>
-        </NextButton>
+
+        </CarouselButton>
       </CarouselControls>
     </CarouselViewport>
   );

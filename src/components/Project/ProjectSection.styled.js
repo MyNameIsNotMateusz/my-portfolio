@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { fontSizes } from "../../styles/variables";
 
-export const SectionWrapper = styled.nav`
+export const SectionWrapper = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.background2};
 `;
@@ -26,10 +26,19 @@ export const Content = styled.div`
 export const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
+  row-gap: 35px;
   width: 100%;
-  background-color: ${({ theme }) => theme.cardBackground};
+  background-color: ${({ theme }) => theme.background1};
   padding: 35px;
   border-radius: 16px;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 22px;
+  }
 `;
 
 export const ProjectHeader = styled.div`
@@ -65,5 +74,111 @@ export const ProjectSubtitle = styled.p`
 
   @media (max-width: 768px) {
     font-size: ${fontSizes.small};
+  }
+`;
+
+export const ProjectCarouselWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.background2};
+  padding: 35px;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 22px;
+  }
+`;
+
+export const ProjectActions = styled.div`
+  display: flex;
+  column-gap: 20px;
+`;
+
+export const ProjectButton = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px 24px;
+  column-gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: ${({ theme, $variant }) =>
+    $variant === "primary" ? theme.primary : theme.background2};
+  font-size: ${fontSizes.small};
+  color: ${({ theme, $variant }) =>
+    $variant === "primary" ? theme.background2 : theme.primary};
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  > svg {
+    height: 20px;
+    color: ${({ theme, $variant }) =>
+      $variant === "primary" ? theme.background2 : theme.primary};
+  }
+
+  &:hover {
+    background-color: ${({ theme, $variant }) =>
+      $variant === "primary" ? theme.background2 : theme.primary};
+    color: ${({ theme, $variant }) =>
+      $variant === "primary" ? theme.primary : theme.background2};
+
+    > svg {
+      color: ${({ theme, $variant }) =>
+        $variant === "primary" ? theme.primary : theme.background2};
+    }
+  }
+`;
+
+export const CarouselViewport = styled.div`
+  position: relative;
+  height: auto;
+  width: 55%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`;
+
+export const SlidesContainer = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+  transform: translateX(0);
+  transition: transform 0.5s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const CarouselControls = styled.div`
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+
+  @media (max-width: 1200px) {
+    column-gap: 15px;
+  }
+`;
+
+export const CarouselButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  svg {
+    height: 40px;
+    color: ${({ theme }) => theme.primary};
   }
 `;

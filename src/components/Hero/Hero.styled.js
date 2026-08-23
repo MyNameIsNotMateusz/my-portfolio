@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { fontSizes } from "../../styles/variables";
 import { darken } from "polished";
 
-export const SectionWrapper = styled.nav`
+export const SectionWrapper = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.background1};
 `;
@@ -109,15 +109,14 @@ export const ResumeButtonStyled = styled.a`
   border-radius: 100px;
   font-weight: 500;
   background-color: ${({ theme }) => theme.primary};
-  color: #fff;
+  color: ${({ theme }) => theme.text3};
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: ${({ theme }) => theme.borderColor1};
-    background-color: #ffffff;
+    background-color: ${({ theme }) => theme.background2};
     color: ${({ theme }) => theme.primary};
   }
 
@@ -135,7 +134,7 @@ export const ResumeButtonStyled = styled.a`
   }
 `;
 
-export const DemoButtonStyled = styled.a`
+export const ProjectsButtonStyled = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,12 +143,11 @@ export const DemoButtonStyled = styled.a`
   font-size: ${fontSizes.medium};
   font-weight: 700;
   color: ${({ theme }) => theme.primary};
-  border: 2px solid ${({ theme }) => theme.borderColor1};
   border-radius: 100px;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.background2};
   transition: all 0.3s ease;
 
   svg {
@@ -165,12 +163,11 @@ export const DemoButtonStyled = styled.a`
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.borderColor2};
     background-color: ${({ theme }) => theme.primary};
-    color: #fff;
+    color: ${({ theme }) => theme.text3};
 
     svg {
-      fill: #fff;
+      fill: ${({ theme }) => theme.text3};
     }
   }
 

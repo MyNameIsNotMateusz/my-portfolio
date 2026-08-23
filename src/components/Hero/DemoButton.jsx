@@ -1,8 +1,8 @@
-import { DemoButtonStyled } from "./Hero.styled";
+import { ProjectsButtonStyled } from "./Hero.styled";
 
 export const DemoButton = ({ onScroll }) => {
   return (
-    <DemoButtonStyled onClick={onScroll}>
+    <ProjectsButtonStyled onClick={onScroll}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -14,7 +14,7 @@ export const DemoButton = ({ onScroll }) => {
           clipRule="evenodd"
         />
       </svg>
-      See my system demo
-    </DemoButtonStyled>
+      See my projects
+    </ProjectsButtonStyled>
   );
 };

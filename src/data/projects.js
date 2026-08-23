@@ -13,11 +13,13 @@ export const projects = [
       { img: demoWmsImages.recipes },
       { img: demoWmsImages.stockModification },
     ],
+    liveDemoUrl: "https://mynameisnotmateusz.github.io/demo-wms/#/login",
+    githubUrl: "https://github.com/mynameisnotmateusz/demo-wms",
   },
   {
     title: "K-Scope",
     subtitle:
-      "A platform for Korean companies to research Korean businesses operating in Poland through financial reports, company data, and market analytics.",
+      "A business platform for Korean companies to explore Korean businesses operating in Poland, with access to company data, financial reports, and market analytics.",
     slides: [
       { img: kScopeImages.company },
       { img: kScopeImages.kScopeDashboard },
@@ -25,16 +27,19 @@ export const projects = [
       { img: kScopeImages.profile },
       { img: kScopeImages.searchPage },
     ],
+    liveDemoUrl: "https://k-scope.pl/",
   },
   {
     title: "K-ERP",
     subtitle:
-      "A business platform where companies can submit requests to purchase warehouse and production management systems.",
+      "A business platform for companies interested in implementing warehouse and production management systems.",
     slides: [
       { img: kErpImages.contactForm },
       { img: kErpImages.kErpDashboard },
       { img: kErpImages.kErpLogin },
       { img: kErpImages.system },
     ],
+    liveDemoUrl: "https://erp.k-scope.pl/",
+    githubUrl: "https://github.com/MyNameIsNotMateusz/k-erp",
   },
 ];
