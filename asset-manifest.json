@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.d57cf95e.js",
+    "main.js": "/my-portfolio/static/js/main.d5757bda.js",
     "static/media/mapChart.jpg": "/my-portfolio/static/media/mapChart.2c9eb37f5798a725f89a.jpg",
     "static/media/stockModification.jpg": "/my-portfolio/static/media/stockModification.d70f39a93e067a276b10.jpg",
     "static/media/demoWmsDashboard.jpg": "/my-portfolio/static/media/demoWmsDashboard.456fd3a6c23a018cdc0d.jpg",
@@ -15,11 +15,11 @@
     "static/media/contactForm.jpg": "/my-portfolio/static/media/contactForm.7fcb88bc3f3008e05679.jpg",
     "static/media/kErpLogin.jpg": "/my-portfolio/static/media/kErpLogin.05e06f590db46f62b245.jpg",
     "static/media/searchPage.jpg": "/my-portfolio/static/media/searchPage.82151b51e266eacffde3.jpg",
-    "static/media/demoWmsLogin.jpg": "/my-portfolio/static/media/demoWmsLogin.f41ef392ce9bf36c75e6.jpg",
+    "static/media/demoWmsLogin.jpg": "/my-portfolio/static/media/demoWmsLogin.a125c53761eaf652341f.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.d57cf95e.js.map": "/my-portfolio/static/js/main.d57cf95e.js.map"
+    "main.d5757bda.js.map": "/my-portfolio/static/js/main.d5757bda.js.map"
   },
   "entrypoints": [
-    "static/js/main.d57cf95e.js"
+    "static/js/main.d5757bda.js"
   ]
 }
