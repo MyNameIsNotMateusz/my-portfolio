@@ -6,12 +6,12 @@ export const projects = [
     subtitle:
       "A warehouse and production management system built for a real automotive manufacturing environment.",
     slides: [
-      { img: demoWmsImages.demoWmsDashboard },
-      { img: demoWmsImages.demoWmsLogin },
       { img: demoWmsImages.createComponents },
       { img: demoWmsImages.plannedDeliveries },
       { img: demoWmsImages.recipes },
       { img: demoWmsImages.stockModification },
+      { img: demoWmsImages.demoWmsDashboard },
+      { img: demoWmsImages.demoWmsLogin },
     ],
     liveDemoUrl: "https://mynameisnotmateusz.github.io/demo-wms/#/login",
     githubUrl: "https://github.com/mynameisnotmateusz/demo-wms",

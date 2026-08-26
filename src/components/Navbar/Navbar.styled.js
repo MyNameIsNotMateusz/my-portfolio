@@ -23,7 +23,7 @@ export const Content = styled.div`
   }
 `;
 
-export const LogoStyled = styled.h1`
+export const LogoStyled = styled.p`
   font-size: ${fontSizes.large};
   font-weight: 700;
   white-space: nowrap;
@@ -40,6 +40,7 @@ export const LogoStyled = styled.h1`
 
 export const NavbarActions = styled.div`
   display: flex;
+  align-items: center;
   column-gap: 30px;
 
   @media (max-width: 768px) {
@@ -47,7 +48,7 @@ export const NavbarActions = styled.div`
   }
 
   @media (max-width: 480px) {
-    column-gap: 0;
+    column-gap: 5px;
   }
 `;
 
@@ -99,5 +100,93 @@ export const DownloadButtonStyled = styled.a`
 
   @media (max-width: 480px) {
     padding: 9px 13px;
+  }
+`;
+
+export const ThemeToggleStyled = styled.button`
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border: none;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.primary};
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  > :nth-child(1) {
+    width: ${({ $isDark }) => ($isDark ? "20px" : "16px")};
+    height: ${({ $isDark }) => ($isDark ? "20px" : "16px")};
+    border-radius: 24px;
+    border: ${({ $isDark, theme }) =>
+      $isDark ? `1px solid ${theme.text1}` : `3px solid ${theme.primary}`};
+    background-color: ${({ theme }) => theme.text1};
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.4s,
+      height 0.4s,
+      border 0.4s,
+      background-color 0.4s;
+    z-index: 10;
+  }
+
+  > :nth-child(3) {
+    width: ${({ $isDark }) => ($isDark ? "18px" : "4px")};
+    height: ${({ $isDark }) => ($isDark ? "18px" : "4px")};
+    border-radius: 9px;
+    background-color: ${({ theme }) => theme.primary};
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    transition:
+      width 0.6s,
+      height 0.6s;
+    transition-delay: 0.08s;
+    z-index: 10;
+  }
+
+  > :nth-child(2) {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: ${({ $isDark }) =>
+      $isDark
+        ? "translate(-50%, -50%) rotate(-45deg) scale(0.8)"
+        : "translate(-50%, -50%)"};
+    transition: transform 0.4s;
+  }
+
+  > :nth-child(2) span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: ${({ theme }) => theme.text1};
+    position: relative;
+  }
+
+  > :nth-child(2) > :nth-child(1) {
+    top: calc(50% - 1px);
+  }
+
+  > :nth-child(2) > :nth-child(2) {
+    top: calc(50% - 3px);
+    transform: rotate(90deg);
+  }
+
+  > :nth-child(2) > :nth-child(3) {
+    top: calc(50% - 5px);
+    transform: rotate(45deg);
+  }
+
+  > :nth-child(2) > :nth-child(4) {
+    top: calc(50% - 7px);
+    transform: rotate(-45deg);
   }
 `;

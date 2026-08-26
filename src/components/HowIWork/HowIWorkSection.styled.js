@@ -84,14 +84,10 @@ export const TimelineLine = styled.div`
   top: 0;
   bottom: 0;
   width: 2px;
-  background: ${({ theme }) => theme.line};
+  background-color: ${({ theme }) => theme.line};
 
   @media (max-width: 768px) {
     left: 30px;
-  }
-
-  @media (max-width: 480px) {
-    left: 22px;
   }
 `;
 
@@ -101,6 +97,10 @@ export const ItemWrapper = styled.div`
   padding: 32px;
   padding-left: 60px;
   border-radius: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   &:before {
     content: "";

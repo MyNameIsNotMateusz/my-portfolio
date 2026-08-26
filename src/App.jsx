@@ -5,14 +5,13 @@ import { PageWrapper } from "./components/PageWrapper/PageWrapper";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Hero } from "./components/Hero/Hero";
 import { FeaturesSection } from "./components/Features/FeaturesSection";
-//usestate do usuniecia bedzie 
 import { useRef, useState } from "react";
 import { projects } from "./data/projects";
 import { ProjectSection } from "./components/Project/ProjectSection";
 import { HowIWorkSection } from "./components/HowIWork/HowIWorkSection";
+import { Footer } from "./components/Footer/Footer";
 
 export const App = () => {
-  //do usuniecia bedzie
   const [isDark, setIsDark] = useState(false);
 
   const projectsSectionRef = useRef(null);
@@ -33,6 +32,7 @@ export const App = () => {
       <PageWrapper>
         <Navbar
           onScroll={scrollToHowIWork}
+          isDark={isDark}
           setIsDark={setIsDark}
         />
         <Hero onScroll={scrollToProjects} />
@@ -46,6 +46,7 @@ export const App = () => {
         ))}
 
         <HowIWorkSection sectionRef={howIWorkSectionRef} />
+        <Footer />
       </PageWrapper>
     </ThemeProvider>
   );
